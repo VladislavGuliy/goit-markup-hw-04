@@ -12,6 +12,7 @@
   --primary-white-color: #ffffff;
   --secondary-background-color: #2f303a;
   --third-background-color: #f5f4fa;
+  --hero-background-color: #c4c4c4;
   --black-color: #000000;
   --transparent-white-color: rgba(255, 255, 255, 0.6);
   --curiousblue-color: #188ce8;
@@ -100,9 +101,11 @@ body {
 .nav-list .link.current {
   color: var(--accent-color);
 }
+
 .header-contact .item + .item {
   margin-left: 40px;
 }
+
 .header-contact .link {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -114,10 +117,23 @@ body {
 /*  Герой  */
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-
-  background-color: var(--secondary-background-color);
+  display: flex;
+  align-items: center;
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: var(--hero-background-color);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid #000000;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   text-align: center;
 }
 .hero-title {
@@ -183,6 +199,32 @@ body {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
 }
+.qualities-list .item::before {
+  display: block;
+  content: "";
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--third-background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70px;
+
+  margin-bottom: 30px;
+
+}
+.item.icon-antenna::before {
+  background-image: url("../images/antenna.svg");
+}
+.item.icon-clock::before {
+  background-image: url("../images/clock.svg");
+}
+.item.icon-diagram::before {
+  background-image: url("../images/diagram.svg");
+}
+.item.icon-astronaut::before {
+  background-image: url("../images/astronaut.svg");
+}
+
 .qualities-list .item:last-child,
 .team-list .item:last-child {
   margin-right: 0px;
@@ -209,7 +251,7 @@ body {
   display: flex;
 }
 .profile .item {
-  width: calc((100% - 60px) / 3)
+  width: calc((100% - 60px) / 3);
 }
 .profile .item:not(:last-child) {
   margin-right: 30px;
