@@ -18,6 +18,7 @@
   --curiousblue-color: #188ce8;
   --gallery-color: #eeeeee;
   --shadow-color: rgba(0, 0, 0, 0.25);
+  --bombay-color: #afb1b8;
 }
 
 body {
@@ -105,7 +106,15 @@ body {
 .header-contact .item + .item {
   margin-left: 40px;
 }
-
+.header-contact .icon-wrapper {
+  display: inline-flex;
+  vertical-align: text-bottom;
+  margin-right: 10px;
+  line-height: 0;
+}
+.header-contact .item-icon {
+  fill: currentColor;
+}
 .header-contact .link {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -194,35 +203,19 @@ body {
 .qualities-list {
   display: flex;
 }
-.qualities-list .item,
-.team-list .item {
+.qualities-list > .item,
+.team-list > .item {
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
 }
-.qualities-list .item::before {
-  display: block;
-  content: "";
+.qualities-list .icon-wrapper {
+  display: flex;
   height: 120px;
   border-radius: 4px;
   background-color: var(--third-background-color);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 70px;
-
   margin-bottom: 30px;
-
-}
-.item.icon-antenna::before {
-  background-image: url("../images/antenna.svg");
-}
-.item.icon-clock::before {
-  background-image: url("../images/clock.svg");
-}
-.item.icon-diagram::before {
-  background-image: url("../images/diagram.svg");
-}
-.item.icon-astronaut::before {
-  background-image: url("../images/astronaut.svg");
+  justify-content: center;
+  align-items: center;
 }
 
 .qualities-list .item:last-child,
@@ -264,9 +257,8 @@ body {
 }
 .team-list {
   display: flex;
-  justify-content: space-between;
 }
-.team-list .item {
+.team-list > .item {
   background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -297,6 +289,43 @@ body {
 .team-list .title {
   margin-bottom: 10px;
 }
+.team-list .text {
+  margin-bottom: 16px;
+}
+.team-socials {
+  line-height: 0;
+  display: flex;
+  justify-content: center;
+}
+.team-socials .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  margin-right: 10px;
+
+  background-color: var(--primary-white-color);
+  color: var(--bombay-color);
+  cursor: pointer;
+}
+.team-socials .item:last-child {
+  margin-right: 0;
+}
+.team-socials .item:hover {
+  background-color:var(--accent-color);
+  color: var(--primary-white-color);
+}
+.team-socials .link-socials {
+  color: inherit;
+  background-color: inherit;
+}
+.link-socials > .item-icon {
+  fill: currentColor;
+}
+
+/* Постійні клиенти */
 
 /*  Футер  */
 
@@ -366,6 +395,7 @@ body {
 /*  Портфоліо  */
 
 /*  Фільтр  */
+
 .filter {
   display: flex;
   justify-content: center;
