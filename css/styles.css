@@ -298,7 +298,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.socials .item {
+.socials .link-socials {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,17 +311,20 @@ body {
   color: var(--primary-white-color);
   cursor: pointer;
 }
-.socials.team .item {
+.socials.team .link-socials {
   background-color: var(--primary-white-color);
   color: var(--bombay-color);
 }
 .socials .item:last-child {
   margin-right: 0;
 }
-.socials .item:hover {
+.socials .link-socials:hover,
+.socials .link-socials:focus {
   background-color: var(--accent-color);
 }
-.socials.team .item:hover {
+
+.socials.team .link-socials:hover,
+.socials.team .link-socials:focus {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
@@ -349,16 +352,17 @@ body {
 }
 .client-link {
   color: inherit;
-}
-.client-list .icon-wrapper {
+
   display: flex;
   height: 92px;
   justify-content: center;
   align-items: center;
   border: 1px solid var(--bombay-color);
-  border-radius: 4px;
+  border-radius: 4px;  
 }
-.client-list .icon-wrapper:hover {
+.client-list .client-link:hover,
+.client-list .client-link:focus
+{
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -495,7 +499,8 @@ body {
 
   background-color: var(--primary-white-color);
 }
-.works-list .item:hover {
+.works-list .item:hover,
+.works-list .link:focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .works-list .item:nth-child(3n) {
