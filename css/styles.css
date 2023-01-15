@@ -500,7 +500,7 @@ body {
   background-color: var(--primary-white-color);
 }
 .works-list .item:hover,
-.works-list .link:focus {
+.works-list .item:focus {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .works-list .item:nth-child(3n) {
